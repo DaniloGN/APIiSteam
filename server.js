@@ -1,17 +1,17 @@
-var express = require('express'),
-var cors = require('cors'),
-app = express(),
-port = process.env.PORT || 8080,
-mongoose = require('mongoose'),
-Game = require('./api/models/iSteamGameModel'), //created model loading here
-bodyParser = require('body-parser');
+var express = require('express')
+var cors = require('cors')
+app = express()
+port = process.env.PORT || 8080
+mongoose = require('mongoose')
+Game = require('./api/models/iSteamGameModel') //created model loading here
+bodyParser = require('body-parser')
 
 // mongoose instance connection url connection
 mongoose.Promise = global.Promise;
 uri = "mongodb://uppeuhxiuxrtgsi:2xOirsV9wn1w5eaUNDuj@btlegvwlgrxnlmz-mongodb.services.clever-cloud.com:27017/btlegvwlgrxnlmz";
 mongoose.connect(uri);
 
-
+app.use(cors())
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
@@ -22,7 +22,7 @@ app.use(function(req, res, next) {
   next();
 });
 
-app.use(cors())
+
 
 var routes = require('./api/routes/iSteamRoutes'); //importing route
 routes(app); //register the route
