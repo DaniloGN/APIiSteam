@@ -1,6 +1,6 @@
 var express = require('express'),
 app = express(),
-port = process.env.PORT || 3000,
+port = process.env.PORT || 80,
 mongoose = require('mongoose'),
 Game = require('./api/models/iSteamGameModel'), //created model loading here
 bodyParser = require('body-parser');
