@@ -17,6 +17,7 @@ var GameSchema = new Schema({
   },
   reviews: [{
     idUser: Number,
+    userName: String,
     rating:Number,
     message:String,
     Created_date: {

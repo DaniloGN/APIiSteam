@@ -20,6 +20,6 @@ module.exports = function(app) {
 
   app.route('/games/:gameId')
     .get(gameList.read_a_game)
-    .put(gameList.update_a_game)
+    // .put(gameList.update_a_game)
     .delete(gameList.delete_a_game);
 };

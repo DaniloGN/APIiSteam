@@ -51,7 +51,7 @@ exports.list_comments = function(req, res) {
 
 
 exports.create_comment = function(req, res) {
-  game.findOneAndUpdate({_id: req.params.gameId}, {$push: req.body}, {new: true}, function(err, game) {
+  game.findOneAndUpdate({_id: req.params.gameId}, {$push: { reviews: req.body}}, {new: true}, function(err, game) {
     if (err)
       res.send(err);
     res.json(game);
@@ -89,13 +89,13 @@ exports.delete_comment = function(req, res) {
      });
    };
     
-exports.update_a_game = function(req, res) {
-  game.findOneAndUpdate({_id: req.params.gameId}, req.body, {new: true}, function(err, game) {
-    if (err)
-      res.send(err);
-    res.json(game);
-  });
-};
+// exports.update_a_game = function(req, res) {
+//   game.findOneAndUpdate({_id: req.params.gameId}, req.body, {new: true}, function(err, game) {
+//     if (err)
+//       res.send(err);
+//     res.json(game);
+//   });
+// };
 
 
 exports.delete_a_game = function(req, res) {
