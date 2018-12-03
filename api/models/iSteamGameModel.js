@@ -16,7 +16,7 @@ var GameSchema = new Schema({
     required: 'Digite a categoria do jogo'
   },
   reviews: [{
-    idUser: Number,
+    idUser: String,
     userName: String,
     rating:Number,
     message:String,

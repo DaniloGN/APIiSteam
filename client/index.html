@@ -1,0 +1,49 @@
+<!-- Jose Danilo Guarizzo Neto 201520486 -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Jogos</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="main_style.css" />
+
+</head>
+<body>
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="index.html" id="home">Jogos</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+    </ul>
+      <input class="form-control mr-sm-2" type="search" id="contentSearch" placeholder="Nome do jogo" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" id="btnSearch">Procurar</button>
+      <button class="btn btn-outline-primary my-2 my-sm-0 ml-2 criar">Criar</button>
+  </div>
+</nav>
+ <div class="form-game">
+    <h4 class="vertical-align">Cadastrar Jogo</h4>
+    <p><input class="form-control mr-sm-2 input_cadastro required" type="text" id="name" placeholder="Nome do jogo"></p>
+    <p><input class="form-control mr-sm-2 input_cadastro required" type="text" id="description" placeholder="Descrição do jogo"></p>
+    <p><input class="form-control mr-sm-2 input_cadastro required" type="text" id="category" placeholder="Categoria"></p>
+    <p class="btn-bottom">
+     <button class="btn btn-success my-2 my-sm-0" id="btnCadastrar">Cadastrar jogo</button>
+      <button class="btn btn-danger my-2 my-sm-0 criar">Cancelar</button>
+    </p>
+    </div>
+
+
+  <div id="content" style="margin-top: 50px;">
+    <ul class="list-group">
+    </ul>
+  </div>
+
+
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
